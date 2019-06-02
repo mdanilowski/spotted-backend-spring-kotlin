@@ -1,3 +1,7 @@
 package pl.mdanilowski.spotted.model
 
-data class Comment(var _id: String?, var comment: String?)
+import org.springframework.data.mongodb.core.mapping.Document
+import java.util.*
+
+@Document
+data class Comment(var comment: String, var date: Date)

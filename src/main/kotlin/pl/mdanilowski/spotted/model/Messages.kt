@@ -1,7 +1,13 @@
 package pl.mdanilowski.spotted.model
 
-data class Messages(var _id: String,
+import org.bson.types.ObjectId
+import org.springframework.data.mongodb.core.mapping.Document
+import java.util.*
+
+@Document(collection = "messages")
+data class Messages(var _id: ObjectId?,
                     var message: String,
                     var city: String,
-                    var tags: List<String>?,
-                    var comments: List<Comment?>?)
+                    var date: Date?,
+                    var tags: ArrayList<String>?,
+                    var comments: ArrayList<Comment?>?)
