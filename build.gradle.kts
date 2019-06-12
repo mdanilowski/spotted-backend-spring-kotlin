@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
 	kotlin("plugin.jpa") version "1.2.71"
 	id("org.springframework.boot") version "2.1.5.RELEASE"
